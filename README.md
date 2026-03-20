@@ -1,18 +1,74 @@
-# React + Vite
+## Project Link
+```
+https://earthquake-project-five.vercel.app/
+```
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Organization
 
-Currently, two official plugins are available:
+```
+earthquake-dashboard/
+├── node_modules/          # Installed dependencies
+├── public/                # Static assets
+├── src/
+│   ├── app/               # Main App component
+│   ├── components/        # Reusable components (Cards, Chart, DataTable)
+│   ├── hooks/             # Custom hooks (data fetching)
+│   ├── store/             # Zustand store for global state
+│   ├── index.css          # Tailwind CSS import and base styles
+│   └── main.jsx           # Entry point
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+└── README.md
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Code Setup
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+1. Clone the repository:
 
-Note: This will impact Vite dev & build performances.
+```bash
+git clone <repo-link>
+cd earthquake-dashboard
+```
 
-## Expanding the ESLint configuration
+2. Install Dependencies 
+```
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Run the development server
+```
+npm run dev
+```
+---
+## Dependencies
+
+Vite → Development build tool
+
+Zustand → Global state management
+
+Recharts → Scatter plot visualization
+
+Axios → Data fetching from API
+
+---
+
+## Features
+
+1. Responsive Two-Panel Layout:  
+      Left Panel: Scatter plot chart,
+      Right Panel: Data table with all columns
+
+2. Interactive Selection: 
+      Clicking a row selects the corresponding chart point
+      Clicking a chart point highlights the corresponding table row
+
+3. Dynamic Chart: 
+      Users can change axes dynamically
+      Chart updates based on selected variables
+
+4. Loading and Error States: 
+      Displays a spinner during data fetching
+      Provides a retry option on failure
